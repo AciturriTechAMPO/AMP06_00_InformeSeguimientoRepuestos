@@ -129,6 +129,8 @@
       <AssemblyReference>System.CodeDom</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="1163,2937" sap2010:WorkflowViewState.IdRef="Sequence_9">
@@ -347,12 +349,13 @@
               <OutArgument x:TypeArguments="sd:DataTable">[out_TransactionData]</OutArgument>
             </Assign.To>
             <Assign.Value>
-              <InArgument x:TypeArguments="sd:DataTable" xml:space="preserve">[(From row In out_TransactionData.AsEnumerable()
- Let transaccion = row("Transaction").ToString().Trim()
- Let step1 = row("Step1").ToString().Trim()
- Where Split(in_Config("OnDemandData").ToString.Trim,";")(0).Trim.Contains(transaccion) OrElse
- 		Split(in_Config("OnDemandData").ToString.Trim,";")(0).Trim.Contains(step1)
- Select row).CopyToDataTable()]</InArgument>
+              <InArgument x:TypeArguments="sd:DataTable" xml:space="preserve">[(From row In out_TransactionData.AsEnumerable() 
+	Let transaccion = row("Transaction").ToString().Trim()  
+	Let step1 = row("Step1").ToString().Trim() 
+Where (Split(in_Config("OnDemandData").ToString.Trim,";")(0).Trim.Contains(transaccion)  AndAlso
+			Not String.IsNullOrEmpty(transaccion)) OrElse
+		Split(in_Config("OnDemandData").ToString.Trim,";")(0).Trim.Contains(step1) 
+Select row).CopyToDataTable()]</InArgument>
             </Assign.Value>
           </Assign>
           <If Condition="[Not io_SheetsCompleted.Count &gt; 0]" DisplayName="Initialize sheet completion statuses for a report" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="If_5">
@@ -513,7 +516,7 @@ False, True)]</InArgument>
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <If Condition="[String.IsNullOrEmpty(io_FullFinalReportPath) AndAlso&#xD;&#xA;Not File.Exists(io_FullFinalReportPath)]" DisplayName="Checks report path and generates if invalid" sap:VirtualizedContainerService.HintSize="452,605" sap2010:WorkflowViewState.IdRef="If_2">
+          <If Condition="[String.IsNullOrEmpty(io_FullFinalReportPath) AndAlso&#xA;Not File.Exists(io_FullFinalReportPath)]" DisplayName="Checks report path and generates if invalid" sap:VirtualizedContainerService.HintSize="452,605" sap2010:WorkflowViewState.IdRef="If_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
