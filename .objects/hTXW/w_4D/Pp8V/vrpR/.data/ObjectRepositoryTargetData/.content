@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="dPFsSDfA7UKNNLrUbv0H5A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="odm.ampo.com" CVScreenId="0fb8ea49-79a2-4793-a5ef-cef5a9769be9" DesignTimeRectangle="797, 912, 134, 38" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Export' class='ag-menu-option-text' parentid='gridValidacionCompras_ZMAT' tag='SPAN' /&gt;" Guid="28cab510-26b0-458e-b2d3-2b8f2af5dd90" ScopeSelectorArgument="&lt;html app='msedge.exe' title='PORTAL AMPO VALIDACIÓN DOCUMENTACIÓN PROVEEDOR' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="26f522f70f8677a16cd2ed3f8f94a7c4.png" xmlns="">0eN0QOhgKsE6193wy7sg9Yw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Hover</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

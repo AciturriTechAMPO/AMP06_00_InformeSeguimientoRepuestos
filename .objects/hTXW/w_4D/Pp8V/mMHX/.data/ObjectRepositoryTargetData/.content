@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="IynQozl-PEOnH2xO9OdGKw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="odm.ampo.com" CVScreenId="f7124828-0780-4273-9c09-091f5fc877dc" DesignTimeRectangle="603, 757, 168, 42" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='*' aria-role='gridcell' tag='DIV' class='*ag-cell-not-inline-editing ag-cell-with-height stringType no-border ag-cell-value' col-id='pedCompra' /&gt;" Guid="360fb456-d919-4e39-b347-424573b394f8" ScopeSelectorArgument="&lt;html app='msedge.exe' title='PORTAL AMPO VALIDACIÓN DOCUMENTACIÓN PROVEEDOR' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="d7fb7b19968a3b2de0a64207d311f5dc.png" xmlns="">0BYYj3cRcaEqih9gXIhNI0g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
