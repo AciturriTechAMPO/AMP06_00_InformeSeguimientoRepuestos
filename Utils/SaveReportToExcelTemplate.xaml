@@ -114,9 +114,10 @@
       <AssemblyReference>System.CodeDom</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SaveReportToExcelTemplate" sap:VirtualizedContainerService.HintSize="1190,1661" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SaveReportToExcelTemplate" sap:VirtualizedContainerService.HintSize="1163,1661" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Range" />
       <Variable x:TypeArguments="sd:DataTable" Name="RangeTable" />
